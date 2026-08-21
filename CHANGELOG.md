@@ -1,0 +1,1 @@
+- 2026-8-21: Added basic info and system-prompt info.
