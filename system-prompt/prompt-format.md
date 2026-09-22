@@ -39,15 +39,23 @@ The format, derived from inspecting requests made by saucepan, is as follows:
 - %%Memory2%%
 - %%Memory1%%
 
+[ Roleplay State ]
+%%VariableName%%: %%VariableValue%%
+
+[ Playbook Lore ]
+[ %%LorebookEntryName%% ]
+%%LorebookEntryContent%%
 
 [ Lore ]
 [ %%LorebookEntryName%% ]
 %%LorebookEntryContent%%
+
+
 ```
 
 Items surrounded by `%%` are used here to indicate where your custom content is substituted.
 
-Note that lorebook entries are selected by Saucepan, and will fill out as much space as there is in the configured context.
+Note that lorebook entries are selected by Saucepan, and will fill out as much space as there is in the configured context. Lorebooks controlled by playbooks come before lorebooks attached directly. Variables included in playbooks are always passed through to the model regardless of whether or not the variable controls a lorebook entry.
 
 Additionally, the last user role message will have the following appended to it, if the options are enabled:
 
